@@ -1,0 +1,31 @@
+Source: deepin-service-plugins
+Section: admin
+Priority: optional
+Maintainer: Deepin Sysdev <sysdev@deepin.com>
+Build-Depends:  debhelper (>= 11),
+ pkg-config,
+ cmake,
+ qtbase5-dev,
+ qttools5-dev-tools,
+ qttools5-dev,
+ libsystemd-dev,
+ libpcap-dev,
+ libnet-dev
+Standards-Version: 4.1.3
+Homepage: https://github.com/linuxdeepin
+
+Package: deepin-service-plugins
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ deepin-service-manager (>= 1.0.5),
+ qttools5-dev-tools
+Description: deepin desktop-environment plugins service
+
+Package: libdeepin-service-plugins-dev
+Architecture: any
+Depends:
+ ${misc:Depends},
+ libdeepin-service-plugins( =${binary:Version})
+Description: deepin desktop-environment - service frame for development

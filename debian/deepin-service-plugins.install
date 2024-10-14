@@ -1,0 +1,7 @@
+/usr/lib/*/deepin-service-manager/*.so
+/usr/share/deepin-service-manager/system/*
+/usr/share/dbus-1/system.d/*
+/usr/share/dsg/configs/*
+/usr/lib/deepin-daemon/service-trigger/earlyoom.service.json
+/usr/share/deepin-service-plugins/oom/translations/*.qm
+/usr/bin/getfromqm
