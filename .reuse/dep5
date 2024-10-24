@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: deepin-service
-Upstream-Contact: guoyao <guoyao@uniontech.com>
-Source: https://github.com/linuxdeepin/deepin-service
+Upstream-Name: deepin-service-plugins
+Upstream-Contact: fuleyi <fuleyi@uniontech.com>
+Source: https://github.com/linuxdeepin/deepin-service-plugins
 
 # Sample paragraph, commented out:
 #
