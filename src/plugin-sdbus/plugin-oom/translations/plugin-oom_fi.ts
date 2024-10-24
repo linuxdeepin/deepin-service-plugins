@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Process terminated</source>
-        <translation>prosessi lopetettu</translation>
+        <translation>Prosessi lopetettu</translation>
     </message>
 </context>
 </TS>
