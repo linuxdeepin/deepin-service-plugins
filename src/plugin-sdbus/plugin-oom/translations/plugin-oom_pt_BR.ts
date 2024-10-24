@@ -3,11 +3,11 @@
     <name>oom</name>
     <message>
         <source>%s process consuming too much memory has been terminated to ensure system stability and performance</source>
-        <translation>O processo %s que consumia muita memória foi encerado para garantir a estabilidade e performance do sistema.</translation>
+        <translation>O processo %s que consumia muita memória foi encerrado para garantir a estabilidade e performance do sistema.</translation>
     </message>
     <message>
         <source>Process terminated</source>
-        <translation>Processo encerado</translation>
+        <translation>Processo encerrado</translation>
     </message>
 </context>
 </TS>
