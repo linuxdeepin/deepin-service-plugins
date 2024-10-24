@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Process terminated</source>
-        <translation>Процесс завершен</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
