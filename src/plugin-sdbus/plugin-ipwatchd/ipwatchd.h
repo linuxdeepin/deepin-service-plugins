@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 UnionTech Software Technology Co., Ltd.
+//
+// SPDX-License-Identifier: LGPL-3.0-or-later
+
 /* IPwatchD - IP conflict detection tool for Linux
  * Copyright (C) 2007-2010 Jaroslav Imrich <jariq(at)jariq(dot)sk>
  *
