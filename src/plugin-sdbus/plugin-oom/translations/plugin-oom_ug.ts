@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Process terminated</source>
-        <translation>پىروگرامما تاقىۋېتىلدى</translation>
+        <translation> پىروگرامما تاقىۋېتىلدى</translation>
     </message>
 </context>
 </TS>
