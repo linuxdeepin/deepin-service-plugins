@@ -3,11 +3,11 @@
     <name>oom</name>
     <message>
         <source>%s process consuming too much memory has been terminated to ensure system stability and performance</source>
-        <translation>processi consumavano troppa memoria e sono stati terminati per assicurare stabilità e performance adeguate</translation>
+        <translation>%s processi consumavano troppa memoria e sono stati terminati per assicurare stabilità e performance adeguate</translation>
     </message>
     <message>
         <source>Process terminated</source>
-        <translation type="unfinished"/>
+        <translation>Processo terminato</translation>
     </message>
 </context>
 </TS>

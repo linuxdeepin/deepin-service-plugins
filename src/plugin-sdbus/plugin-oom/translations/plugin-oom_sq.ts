@@ -3,7 +3,7 @@
     <name>oom</name>
     <message>
         <source>%s process consuming too much memory has been terminated to ensure system stability and performance</source>
-        <translation>Procesi %s, që po zinte shumë kujtesë, është përfunduar, për të siguruar qëndrueshmërinë dhe funksionimin e sistemit</translation>
+        <translation>Procesi %s, që po zinte shumë kujtesë, u përfundua, për të siguruar qëndrueshmërinë dhe funksionimin e sistemit</translation>
     </message>
     <message>
         <source>Process terminated</source>

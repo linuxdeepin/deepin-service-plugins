@@ -3,11 +3,11 @@
     <name>oom</name>
     <message>
         <source>%s process consuming too much memory has been terminated to ensure system stability and performance</source>
-        <translation>Həddindən artıq yaddaş istifadə edən proses, sistemin sabitliyini və məhsuldarlığını qorumaq üçün dayandırılacaq</translation>
+        <translation>Həddindən artıq yaddaş istifadə edən %s proses, sistemin sabitliyini və məhsuldarlığını qorumaq üçün dayandırılacaq</translation>
     </message>
     <message>
         <source>Process terminated</source>
-        <translation type="unfinished"/>
+        <translation>Proses dayandırıldı</translation>
     </message>
 </context>
 </TS>

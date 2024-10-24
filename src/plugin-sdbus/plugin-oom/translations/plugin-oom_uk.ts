@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Process terminated</source>
-        <translation>Перервано роботу процесу</translation>
+        <translation>Роботу процесу перервано</translation>
     </message>
 </context>
 </TS>
