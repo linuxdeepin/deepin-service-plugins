@@ -26,3 +26,6 @@ set(DTK_VERSION_MAJOR 6)
 
 add_subdirectory("src")
 
+if(BUILD_TESTING)
+    add_subdirectory("tests")
+endif()
