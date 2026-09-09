@@ -19,6 +19,13 @@ set(CMAKE_AUTOMOC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core DBus Gui Test)
 
+# Coverage instrumentation (on by default so `coverage` produces a report).
+option(ENABLE_COVERAGE "Enable coverage instrumentation for tests" ON)
+if(ENABLE_COVERAGE)
+    add_compile_options(--coverage)
+    add_link_options(--coverage)
+endif()
+
 set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
 
 # ---------------------------------------------------------------------------
@@ -141,3 +148,37 @@ target_include_directories(tst-xsdatainfo PRIVATE
 )
 target_link_libraries(tst-xsdatainfo PRIVATE Qt6::Core Qt6::Test)
 add_test(NAME xsettings-xsdatainfo COMMAND tst-xsdatainfo)
+
+# ---- coverage: execute all tests and generate a coverage report ----
+find_program(LCOV_BIN lcov)
+find_program(GENHTML_BIN genhtml)
+set(_run_test_coverage "")
+if(LCOV_BIN AND GENHTML_BIN)
+    set(_run_test_coverage
+        COMMAND ${LCOV_BIN} --capture --directory ${CMAKE_BINARY_DIR}
+                --rc lcov_branch_coverage=1 --output-file ${CMAKE_BINARY_DIR}/coverage.info
+        COMMAND ${LCOV_BIN} --extract ${CMAKE_BINARY_DIR}/coverage.info
+                --rc lcov_branch_coverage=1
+                "${CMAKE_SOURCE_DIR}/src/plugin-qt/thememanager/*"
+                "${CMAKE_SOURCE_DIR}/src/plugin-qt/wallpaperslideshow/*"
+                "${CMAKE_SOURCE_DIR}/src/plugin-qt/xsettings/*"
+                --output-file ${CMAKE_BINARY_DIR}/coverage_filtered.info
+        COMMAND ${GENHTML_BIN} ${CMAKE_BINARY_DIR}/coverage_filtered.info
+                --branch-coverage --output-directory ${CMAKE_BINARY_DIR}/coverage_report
+    )
+endif()
+add_custom_target(coverage
+    COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
+    ${_run_test_coverage}
+    DEPENDS
+        tst-sunrisesunset
+        tst-wpssl-utils
+        tst-format
+        tst-wallpaperslideshow-dbus
+        tst-keyfile
+        tst-xsutils
+        tst-xsdatainfo
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Run all tests and generate coverage report"
+    VERBATIM
+)
