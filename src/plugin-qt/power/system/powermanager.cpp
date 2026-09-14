@@ -551,7 +551,7 @@ void SystemPowerManager::initPowerSavingDConfig()
         else if (key == QLatin1String(kShortIdleEnable))
             m_shortIdleEnabled = value.toBool();
         else if (key == QLatin1String(kShortIdleState))
-            m_shortIdleState = value.toBool();
+            setShortIdleState(value.toBool());
         else if (key == QLatin1String(kIdleStatePath))
             m_idleStatePath = value.toString();
         else if (key == QLatin1String(kIdleScreenStatePath))
